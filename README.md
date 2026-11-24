@@ -1,4 +1,4 @@
-# macOS Trackpad Visualisations
+# macOS Trackpad Visualizations
 
 Three standalone Swift apps explore visual data through a Force Touch trackpad.
 
