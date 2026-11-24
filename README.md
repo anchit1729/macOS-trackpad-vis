@@ -2,6 +2,8 @@
 
 Five standalone Swift apps explore visual data through a Force Touch trackpad.
 
+For personal website updates, see the [portfolio website brief](PORTFOLIO_WEBSITE_BRIEF.md).
+
 | Example | What you see | What you feel |
 | --- | --- | --- |
 | [Haptic Terrain Atlas](HapticTerrainAtlas/README.md) | A terrain and weather map | Continuous, audio-derived terrain and weather textures |
