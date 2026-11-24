@@ -1,0 +1,30 @@
+name: HapticDocumentReader
+options:
+  bundleIdPrefix: ca.anchit
+  deploymentTarget:
+    macOS: "15.0"
+settings:
+  base:
+    SWIFT_VERSION: 6.0
+    CODE_SIGNING_ALLOWED: NO
+targets:
+  HapticDocumentReader:
+    type: application
+    platform: macOS
+    sources:
+      - path: Sources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: ca.anchit.HapticDocumentReader
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: Haptic Document Reader
+  HapticDocumentReaderTests:
+    type: bundle.unit-test
+    platform: macOS
+    sources:
+      - path: Tests
+    dependencies:
+      - target: HapticDocumentReader
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES

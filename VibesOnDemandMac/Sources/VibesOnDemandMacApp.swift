@@ -44,7 +44,14 @@ private struct TraceWorkspace: View {
                 TraceCanvasView(model: model)
                     .clipShape(RoundedRectangle(cornerRadius: 16))
                     .padding(.horizontal, 18)
-                    .padding(.bottom, 14)
+                    .padding(.bottom, 10)
+                TraceLinePanel(series: model.selectedSeries ?? TraceLibrary.series[0],
+                               isExample: model.selectedSeries == nil,
+                               showLine: model.showLine,
+                               progress: model.progress)
+                    .frame(height: 126)
+                    .padding(.horizontal, 18)
+                    .padding(.bottom, 10)
                 footer
                     .frame(height: 46)
             }
@@ -54,6 +61,7 @@ private struct TraceWorkspace: View {
     }
 
     private var sidebar: some View {
+        ScrollView {
         VStack(alignment: .leading, spacing: 0) {
             Text("VIBES ON DEMAND")
                 .font(.system(size: 11, weight: .bold, design: .monospaced))
@@ -99,6 +107,7 @@ private struct TraceWorkspace: View {
                 .padding(.top, 7)
         }
         .padding(23)
+        }
         .background(.white)
     }
 
@@ -148,5 +157,58 @@ private struct TraceWorkspace: View {
                 .tint(.purple)
         }
         .padding(.top, 11)
+    }
+}
+
+private struct TraceLinePanel: View {
+    let series: TraceSeries
+    let isExample: Bool
+    let showLine: Bool
+    let progress: Double
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 7) {
+            HStack {
+                Text(isExample ? "SAMPLE LINE CHART" : "\(series.label.uppercased()) · LINE CHART")
+                    .font(.system(size: 10, weight: .bold, design: .monospaced))
+                    .foregroundStyle(.secondary)
+                Spacer()
+                Text(series.shape.rawValue.uppercased())
+                    .font(.system(size: 10, design: .monospaced))
+                    .foregroundStyle(.purple)
+            }
+            if showLine {
+                Canvas { context, size in
+                    let inset: CGFloat = 4
+                    let width = max(1, size.width - 2 * inset)
+                    let height = max(1, size.height - 2 * inset)
+                    let points = series.values.enumerated().map { index, value in
+                        CGPoint(x: inset + CGFloat(index) / CGFloat(series.values.count - 1) * width,
+                                y: inset + (1 - value) * height)
+                    }
+                    var path = Path()
+                    for (index, point) in points.enumerated() {
+                        if index == 0 { path.move(to: point) }
+                        else { path.addLine(to: point) }
+                    }
+                    context.stroke(path, with: .color(.purple), style: StrokeStyle(lineWidth: 2.5, lineCap: .round, lineJoin: .round))
+                    if !isExample {
+                        let x = inset + min(1, max(0, progress)) * width
+                        var playhead = Path()
+                        playhead.move(to: CGPoint(x: x, y: 0))
+                        playhead.addLine(to: CGPoint(x: x, y: size.height))
+                        context.stroke(playhead, with: .color(.purple.opacity(0.35)), lineWidth: 1)
+                    }
+                }
+                .accessibilityLabel("\(series.label), \(series.shape.rawValue) line chart")
+            } else {
+                Text("Visual trace hidden")
+                    .font(.system(size: 12))
+                    .foregroundStyle(.secondary)
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+            }
+        }
+        .padding(14)
+        .background(.white, in: RoundedRectangle(cornerRadius: 14))
     }
 }

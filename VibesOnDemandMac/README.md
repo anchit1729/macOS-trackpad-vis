@@ -1,6 +1,6 @@
 # Vibes on Demand for macOS
 
-This native Swift app ports the core details on demand interaction to a Force Touch trackpad. A scatterplot holds 36 deterministic, synthetic time series. Press a point to see and feel its trace. A moving playhead shows the part of the trace being played.
+This native Swift app ports the core details on demand interaction to a Force Touch trackpad. A scatterplot holds 36 deterministic, synthetic time series. A visible line chart below the plot shows a sample on launch. Press a point to see and feel its trace. The line chart then shows that point, and a moving playhead shows the part being played.
 
 ## Use
 

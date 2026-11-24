@@ -205,7 +205,7 @@ final class TraceCanvas: NSView {
 }
 
 struct TraceCanvasView: NSViewRepresentable {
-    let model: TraceModel
+    @ObservedObject var model: TraceModel
 
     func makeNSView(context: Context) -> TraceCanvas { TraceCanvas(frame: .zero) }
 

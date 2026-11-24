@@ -1,6 +1,6 @@
 # macOS Trackpad Visualizations
 
-Four standalone Swift apps explore visual data through a Force Touch trackpad.
+Five standalone Swift apps explore visual data through a Force Touch trackpad.
 
 | Example | What you see | What you feel |
 | --- | --- | --- |
@@ -8,6 +8,7 @@ Four standalone Swift apps explore visual data through a Force Touch trackpad.
 | [Haptic Fluid Lab](HapticFluidLab/README.md) | A 2D + 3D PIC–FLIP fluid simulation | Local motion or pressure, with layered flow and crest cues |
 | [Haptic Compass Hunt](HapticCompassHunt/README.md) | A hidden-point search field | Continuous proximity, plus horizontal and vertical direction accents |
 | [Vibes on Demand](VibesOnDemandMac/README.md) | A scatterplot with time series details | Trace shape, peaks, and slope changes on press or scrub |
+| [Haptic Document Reader](HapticDocumentReader/README.md) | A plain text document with hidden semantic ranges | Distinct patterns for calm, curiosity, uncertainty, urgency, loss, and hope |
 
 ## Build
 
