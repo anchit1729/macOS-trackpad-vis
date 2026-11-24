@@ -1,12 +1,13 @@
 # macOS Trackpad Visualizations
 
-Three standalone Swift apps explore visual data through a Force Touch trackpad.
+Four standalone Swift apps explore visual data through a Force Touch trackpad.
 
 | Example | What you see | What you feel |
 | --- | --- | --- |
 | [Haptic Terrain Atlas](HapticTerrainAtlas/README.md) | A terrain and weather map | Continuous, audio-derived terrain and weather textures |
 | [Haptic Fluid Lab](HapticFluidLab/README.md) | A 2D + 3D PIC–FLIP fluid simulation | Local motion or pressure, with layered flow and crest cues |
 | [Haptic Compass Hunt](HapticCompassHunt/README.md) | A hidden-point search field | Continuous proximity, plus horizontal and vertical direction accents |
+| [Vibes on Demand](VibesOnDemandMac/README.md) | A scatterplot with time series details | Trace shape, peaks, and slope changes on press or scrub |
 
 ## Build
 
@@ -18,7 +19,7 @@ xcodegen generate
 open HapticCompassHunt.xcodeproj
 ```
 
-Replace `HapticCompassHunt` with either other example name. Each app has its own build and test steps.
+Replace `HapticCompassHunt` with another example name. Each app has its own build and test steps.
 
 ## Trackpad support
 
