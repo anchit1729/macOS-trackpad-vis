@@ -1,0 +1,30 @@
+name: HapticFluidLab
+options:
+  bundleIdPrefix: ca.anchit
+  deploymentTarget:
+    macOS: "15.0"
+settings:
+  base:
+    SWIFT_VERSION: 6.0
+    CODE_SIGNING_ALLOWED: NO
+targets:
+  HapticFluidLab:
+    type: application
+    platform: macOS
+    sources:
+      - path: Sources
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: ca.anchit.HapticFluidLab
+        GENERATE_INFOPLIST_FILE: YES
+        INFOPLIST_KEY_CFBundleDisplayName: Haptic Fluid Lab
+  HapticFluidLabTests:
+    type: bundle.unit-test
+    platform: macOS
+    sources:
+      - path: Tests
+    dependencies:
+      - target: HapticFluidLab
+    settings:
+      base:
+        GENERATE_INFOPLIST_FILE: YES
