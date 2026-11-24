@@ -5,7 +5,7 @@ Three standalone Swift apps explore visual data through a Force Touch trackpad.
 | Example | What you see | What you feel |
 | --- | --- | --- |
 | [Haptic Terrain Atlas](HapticTerrainAtlas/README.md) | A terrain and weather map | Continuous, audio-derived terrain and weather textures |
-| [Haptic Fluid Lab](HapticFluidLab/README.md) | A 2D and 3D PIC–FLIP fluid simulation | Local motion or pressure, with layered flow and crest cues |
+| [Haptic Fluid Lab](HapticFluidLab/README.md) | A 2D + 3D PIC–FLIP fluid simulation | Local motion or pressure, with layered flow and crest cues |
 | [Haptic Compass Hunt](HapticCompassHunt/README.md) | A hidden-point search field | Continuous proximity, plus horizontal and vertical direction accents |
 
 ## Build
