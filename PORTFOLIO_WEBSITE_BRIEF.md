@@ -65,6 +65,8 @@ Use the guides for technical facts. Use the source code when a guide leaves a de
 
 - **Haptic Document Reader:** A plain text story with hidden phrase cues for calm, curiosity, uncertainty, urgency, loss, and hope.
 - **Haptic Compass Hunt:** A hidden point game with distance and direction cues that guide a search across the screen.
+- **Haptic Beat Lab:** A timed target game with guide and augment haptic modes.
+- **Haptic Code Review:** An editable code example that makes agent notes feel distinct while moving through code.
 
 Link each experiment to its repository folder. A short description is enough unless there is new evaluation evidence.
 

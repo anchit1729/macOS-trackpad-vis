@@ -1,0 +1,24 @@
+{
+  "notes": [
+    {
+      "anchor": "try! Data(contentsOf: source)",
+      "kind": "risk",
+      "message": "A missing file can crash this path. Return an error instead."
+    },
+    {
+      "anchor": "String(decoding: data, as: UTF8.self)",
+      "kind": "question",
+      "message": "Should malformed UTF-8 be rejected or replaced?"
+    },
+    {
+      "anchor": "return lines\n",
+      "kind": "suggestion",
+      "message": "Consider trimming blank lines before returning the result."
+    },
+    {
+      "anchor": "func firstMatch",
+      "kind": "testGap",
+      "message": "Add tests for a missing query and repeated matches."
+    }
+  ]
+}

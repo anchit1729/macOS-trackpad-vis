@@ -1,8 +1,9 @@
 # macOS Trackpad Visualizations
 
-Five standalone Swift apps explore visual data through a Force Touch trackpad.
+Seven standalone Swift apps explore visual data through a Force Touch trackpad.
 
 For personal website updates, see the [portfolio website brief](PORTFOLIO_WEBSITE_BRIEF.md).
+For agent integration, see the [tactile review queue concept](AGENT_HAPTIC_SIDE_CHANNEL.md).
 
 | Example | What you see | What you feel |
 | --- | --- | --- |
@@ -11,6 +12,8 @@ For personal website updates, see the [portfolio website brief](PORTFOLIO_WEBSIT
 | [Haptic Compass Hunt](HapticCompassHunt/README.md) | A hidden-point search field | Continuous proximity, plus horizontal and vertical direction accents |
 | [Vibes on Demand](VibesOnDemandMac/README.md) | A scatterplot with time series details | Trace shape, peaks, and slope changes on press or scrub |
 | [Haptic Document Reader](HapticDocumentReader/README.md) | A plain text document with hidden semantic ranges | Distinct patterns for calm, curiosity, uncertainty, urgency, loss, and hope |
+| [Haptic Beat Lab](HapticBeatLab/README.md) | A timed circle selection game | Guidance for direction and distance, or rhythm and hit accents |
+| [Haptic Code Review](HapticCodeReview/README.md) | An editable code file with agent notes | Line cues for risks, suggestions, questions, test gaps, and tasks |
 
 ## Build
 
